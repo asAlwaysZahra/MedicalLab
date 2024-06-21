@@ -20,5 +20,6 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Define relationships and other configurations
+        modelBuilder.Entity<Billing>(entity => { entity.Property(e => e.Amount).HasColumnType("decimal(18,2)"); });
     }
 }

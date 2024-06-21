@@ -12,6 +12,7 @@ public static class DependencyInjection
     {
         // serviceCollection.AddDbContext<ApplicationDbContext>(builder => builder.UseInMemoryDatabase("database"));
         serviceCollection.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                b => b.MigrationsAssembly("MedicalLabApi")));
     }
 }
