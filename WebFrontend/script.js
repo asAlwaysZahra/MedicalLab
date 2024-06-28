@@ -1,6 +1,8 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
+setInterval(nextSlideAuto, 3000);
+
 window.addEventListener('scroll', handleScroll);
 
 function isElementInViewport(el) {
@@ -37,12 +39,12 @@ function handleScroll() {
     });
 }
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(x) {
+    showSlides(slideIndex += x);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(x) {
+    showSlides(slideIndex = x);
 }
 
 function showSlides(n) {
@@ -63,4 +65,8 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
+}
+
+function nextSlideAuto() {
+    showSlides(++slideIndex);
 }
