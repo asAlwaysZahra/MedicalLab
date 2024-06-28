@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: rgba(87, 116, 180, 0.89);
+    background-color: #7891c2;
     color: white;
     padding: 20px 0;
     margin: 0;
@@ -142,7 +142,7 @@ header nav ul li a:hover {
 .social-media {
     display: flex;
     justify-content: center;
-    list-style: none;
+    list-style-type: none;
 }
 
 .social-media li a img {
@@ -154,4 +154,51 @@ header nav ul li a:hover {
     background-color: rgba(87, 116, 180, 0.89);
     padding: 10px;
     color: white;
+}
+
+/*----------------------------------------------------------*/
+
+.features-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.features-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.feature-card {
+    background-color: rgba(26, 133, 255, 0.14);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    width: 35%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card .icon {
+    margin-bottom: 20px;
+}
+
+.feature-card .icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.feature-card h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 1em;
 }
