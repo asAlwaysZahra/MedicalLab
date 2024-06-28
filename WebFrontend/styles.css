@@ -133,23 +133,6 @@ header nav ul li a:hover {
     background-color: #717171;
 }
 
-.footer-content {
-    text-align: center;
-    background-color: rgba(87, 116, 180, 0.8);
-    padding: 20px 0;
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-.social-media li a img {
-    width: 40px;
-    height: 40px;
-}
-
 .copy-right {
     background-color: rgba(87, 116, 180, 0.89);
     padding: 10px;
@@ -244,13 +227,15 @@ header nav ul li a:hover {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    background-color: rgba(87, 116, 180, 0.8);
+    padding: 20px 0;
 }
 
 .footer-content .social-media {
     list-style-type: none;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 .footer-content .social-media li {
@@ -261,3 +246,93 @@ header nav ul li a:hover {
     height: 40px;
     width: 40px;
 }
+
+/*----------------------------------------------------------*/
+
+.summery-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summery-section img {
+    width: 20%;
+    border-radius: 10px;
+    margin: 20px 20px;
+}
+
+.summery-content {
+    flex: 1.5;
+    padding: 20px;
+}
+
+.summery-content .count {
+    color: rgba(26, 133, 255, 0.77);
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.summery-content h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.summery-content h3 {
+    display: inline;
+}
+
+.summery-content p {
+    margin: 20px 0;
+    color: #555;
+}
+
+.summery-content .btn {
+    background-color: rgba(26, 133, 255, 0.77);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.summery-content .btn:hover {
+    background-color: inherit;
+    border: rgba(26, 133, 255, 0.77) solid 2px;
+    color: rgba(26, 133, 255, 0.77);
+}
+
+.summery-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    padding: 20px;
+}
+
+.summery-details .detail {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-right: #b6b6b6 dashed 1px;
+}
+
+.summery-details .detail img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: rgba(26, 133, 255, 0.77) solid 1px;
+    padding: 2px;
+}
+
+.summery-details .detail h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px;
+}
+
+.summery-details .detail p {
+    margin: 15px 0;
+    color: #555;
+    /*width: 50%;*/
+}
+
+/*----------------------------------------------------------*/
