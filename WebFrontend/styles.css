@@ -202,3 +202,62 @@ header nav ul li a:hover {
     color: #555;
     font-size: 1em;
 }
+
+/*----------------------------------------------------------*/
+
+.statistics-section {
+    background: url('images/1.jpg') no-repeat fixed center center;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.statistics-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 22%;
+}
+
+.stat-card h3 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.stat-card p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+/*----------------------------------------------------------*/
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-content .social-media {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.footer-content .social-media li {
+    margin: 0 10px;
+}
+
+.footer-content .social-media li a img {
+    height: 40px;
+    width: 40px;
+}
