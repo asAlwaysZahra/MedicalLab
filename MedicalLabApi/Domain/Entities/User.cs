@@ -7,6 +7,4 @@ public class User
     public string Password { get; set; }
     public string Role { get; set; } // admin, technician, doctor, patient
     public DateTime CreatedAt { get; set; } = DateTime.Now;
-
-    public ICollection<Patient> Patients { get; set; }
 }

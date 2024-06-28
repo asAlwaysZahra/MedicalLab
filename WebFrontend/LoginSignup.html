@@ -21,13 +21,13 @@
     <div class="form login">
         <div class="form-content">
             <header>ورود</header>
-            <form action="#">
+            <form id="loginForm">
                 <div class="field input-field">
-                    <input type="email" placeholder="ایمیل" class="input">
+                    <input type="email" placeholder="ایمیل" class="input" name="email">
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="رمز عبور" class="password">
+                    <input type="password" placeholder="رمز عبور" class="password" name="password">
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
 
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="field button-field">
-                    <button>ورود</button>
+                    <button type="submit">ورود</button>
                 </div>
             </form>
 
@@ -67,22 +67,22 @@
     <div class="form signup">
         <div class="form-content">
             <header>ثبت نام</header>
-            <form action="#">
+            <form id="signupForm">
                 <div class="field input-field">
-                    <input type="email" placeholder="ایمیل" class="input">
+                    <input type="email" placeholder="ایمیل" class="input" name="email">
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="رمز عبور" class="password">
+                    <input type="password" placeholder="رمز عبور" class="password" name="password">
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="تایید رمز" class="password">
+                    <input type="password" placeholder="تایید رمز" class="password" name="confirmPassword">
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
 
                 <div class="field button-field">
-                    <button>ثبت نام</button>
+                    <button type="submit" id="signup-submit">ثبت نام</button>
                 </div>
             </form>
 
@@ -112,5 +112,6 @@
 
 <!-- JavaScript -->
 <script src="LoginSignup.js"></script>
+<script src="api-request.js"></script>
 </body>
 </html>

@@ -227,7 +227,7 @@ namespace MedicalLabApi.Migrations
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
                     b.HasOne("Domain.Entities.User", "User")
-                        .WithMany("Patients")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -238,7 +238,7 @@ namespace MedicalLabApi.Migrations
             modelBuilder.Entity("Domain.Entities.TestResult", b =>
                 {
                     b.HasOne("Domain.Entities.LabTest", "LabTest")
-                        .WithMany("TestResults")
+                        .WithMany()
                         .HasForeignKey("LabTestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -254,19 +254,9 @@ namespace MedicalLabApi.Migrations
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("Domain.Entities.LabTest", b =>
-                {
-                    b.Navigation("TestResults");
-                });
-
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
                     b.Navigation("TestResults");
-                });
-
-            modelBuilder.Entity("Domain.Entities.User", b =>
-                {
-                    b.Navigation("Patients");
                 });
 #pragma warning restore 612, 618
         }
