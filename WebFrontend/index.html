@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمایشگاه پزشکی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <img class="logo" src="images/logo.png" alt="آزمایشگاه پزشکی">
+            <ul>
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#contact">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section id="home" class="hero">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/main_img.jpg" style="width:100%" alt="">
+                <div class="text">به آزمایشگاه ما خوش آمدید</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/main_img2.jpg" style="width:100%" alt="">
+                <div class="text">ارائه بهترین خدمات آزمایشگاهی</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/1.png" style="width:100%" alt="">
+                <div class="text">تجهیزات مدرن</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/1.jpg" style="width:100%" alt="">
+                <div class="text">تجهیزات مدرن</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/3.png" style="width:100%" alt="">
+                <div class="text"> مدرن و پیشرفته</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/4.jpg" style="width:100%" alt="">
+                <div class="text"> مدرن و پیشرفته</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/5.jpg" style="width:100%" alt="">
+                <div class="text"> مدرن و پیشرفته</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+    <!-- Other sections remain the same -->
+</main>
+<footer>
+    <div class="footer-content">
+
+        <ul class="social-media">
+            <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/linkedin.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+        </ul>
+
+        <p class="copy-right">&copy;آزمایشگاه پزشکی، تمامی حقوق محفوظ است.</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
