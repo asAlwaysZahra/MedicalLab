@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Application.DTOs;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 using Infrastructure.Data;
@@ -84,5 +85,23 @@ public class UsersController : ControllerBase
         await _context.SaveChangesAsync();
 
         return NoContent();
+    }
+
+    [HttpGet("login")]
+    public async Task<IActionResult> Login(LoginRequest request)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Username.Equals(request.Username));
+
+        if (user == null)
+        {
+            return NotFound("user not found");
+        }
+
+        if (user.Password.Equals(request.Password))
+        {
+            return Ok(user);
+        }
+
+        return Unauthorized("wrong password");
     }
 }

@@ -20,15 +20,15 @@ loginForm.onsubmit = function (event) {
     event.preventDefault(); // Prevent the default form submission
     console.log("kddddddd");
     // Capture the form data
-    const email = loginForm.email.value;
+    const username = loginForm.email.value;
     const password = loginForm.password.value;
 
     // Create the request payload
-    const data = JSON.stringify({email, password});
-
+    const data = JSON.stringify({username, password});
+    console.log(data);
     // Create a new XMLHttpRequest object
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://localhost:44396/api/Users', true);
+    xhr.open('GET', 'https://localhost:44396/api/Users/login', true);
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
 
     // Define a function to handle the response
@@ -37,16 +37,18 @@ loginForm.onsubmit = function (event) {
             if (xhr.status === 200) {
                 // Request was successful
                 console.log(xhr.responseText);
+            } else if (xhr.status === 403) {
+                alert("wrong password");
             } else {
                 // Handle error
                 console.error('Error:', xhr.statusText);
+                alert("username not found");
             }
         }
     };
 
     // Send the request with the payload
     xhr.send(data);
-    event.target.submit();
 };
 
 
